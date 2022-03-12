@@ -43,7 +43,7 @@ app.route('/name')
     .get((req, res) => {
         const { first } = req.query
         const { last } = req.query
-        res.json({ name: `${firstname} ${lastname}` })
+        res.json({ name: `${first} ${last}` })
     })
 
 
