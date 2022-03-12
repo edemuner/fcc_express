@@ -48,6 +48,11 @@ app.route('/name')
         const { last } = req.query
         res.json({ name: `${first} ${last}` })
     })
+    .post((req, res) => {
+        const { first } = req.body
+        const { last } = req.body
+        res.json({ name: `${first} ${last}` })
+    })
 
 
  module.exports = app;
