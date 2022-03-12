@@ -3,6 +3,9 @@ const req = require('express/lib/request');
 const res = require('express/lib/response');
 var app = express();
 require('dotenv').config()
+const bodyparser = require('body-parser')
+
+app.use(bodyparser.urlencoded({extended:false}))
 
 app.use('/', (req, res, next) => {
     console.log(`${req.method} ${req.path} - ${req.ip}`)
